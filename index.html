@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kalkulator Ilmiah</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Kalkulator Ilmiah</h1>
+    <p>Trigonometri, logaritma, pangkat, faktorial, dan riwayat perhitungan.</p>
+  </header>
+
+  <main>
+    <div class="card calc">
+      <div class="calc-head">
+        <label class="switch">
+          Sudut:
+          <button id="angleToggle" type="button" class="chip" aria-label="Ganti satuan sudut">DEG</button>
+        </label>
+        <span class="hint">Contoh: sin(30) + 2^3 + sqrt(16) + 5!</span>
+      </div>
+
+      <input id="calcInput" class="calc-input" type="text" autocomplete="off"
+             spellcheck="false" placeholder="Ketik ekspresi…" aria-label="Ekspresi matematika">
+      <output id="calcResult" class="calc-result" aria-live="polite">0</output>
+
+      <div class="keys" id="keys">
+        <button data-ins="sin(" class="fn">sin</button>
+        <button data-ins="cos(" class="fn">cos</button>
+        <button data-ins="tan(" class="fn">tan</button>
+        <button data-ins="ln(" class="fn">ln</button>
+        <button data-ins="log(" class="fn">log</button>
+
+        <button data-ins="asin(" class="fn">sin⁻¹</button>
+        <button data-ins="acos(" class="fn">cos⁻¹</button>
+        <button data-ins="atan(" class="fn">tan⁻¹</button>
+        <button data-ins="sqrt(" class="fn">√</button>
+        <button data-ins="^" class="fn">xʸ</button>
+
+        <button data-ins="(" class="fn">(</button>
+        <button data-ins=")" class="fn">)</button>
+        <button data-ins="π" class="fn">π</button>
+        <button data-ins="e" class="fn">e</button>
+        <button data-ins="!" class="fn">n!</button>
+
+        <button data-ins="7">7</button>
+        <button data-ins="8">8</button>
+        <button data-ins="9">9</button>
+        <button data-ins="÷" class="op">÷</button>
+        <button data-act="clear" class="danger">C</button>
+
+        <button data-ins="4">4</button>
+        <button data-ins="5">5</button>
+        <button data-ins="6">6</button>
+        <button data-ins="×" class="op">×</button>
+        <button data-act="back" class="danger">⌫</button>
+
+        <button data-ins="1">1</button>
+        <button data-ins="2">2</button>
+        <button data-ins="3">3</button>
+        <button data-ins="−" class="op">−</button>
+        <button data-ins="+" class="op">+</button>
+
+        <button data-ins="0">0</button>
+        <button data-ins=".">.</button>
+        <button data-ins="%" class="op">%</button>
+        <button data-ins="ans">Ans</button>
+        <button data-act="equals" class="primary">=</button>
+      </div>
+
+      <details class="history">
+        <summary>Riwayat perhitungan</summary>
+        <ul id="historyList"><li class="empty">Belum ada perhitungan.</li></ul>
+      </details>
+    </div>
+  </main>
+
+  <footer>Dibuat dengan HTML, CSS, dan JavaScript murni — tanpa pustaka tambahan.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
